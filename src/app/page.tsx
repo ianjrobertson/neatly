@@ -45,9 +45,6 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Badge variant="secondary" className="mb-4">
-                Now Available
-              </Badge>
               <h1 className="text-4xl lg:text-6xl font-medium text-foreground mb-6">
                 Turn Any Recipe Into
                 <span className="text-primary block">Smart Shopping Lists</span>
