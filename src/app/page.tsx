@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion"
 import { Badge, BookOpen, ChefHat, Clock, Heart, Play, Search, Star, Users, ShoppingCart, Link, Smartphone } from "lucide-react";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -19,12 +20,6 @@ export default function Home() {
           >
             <span className="text-xl font-medium text-primary">Neatly</span>
           </motion.div>
-          
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
-            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
-          </nav>
           
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -102,6 +97,14 @@ export default function Home() {
                   <span className="text-sm font-medium">15 min</span>
                 </div>
               </motion.div>
+
+              <Image
+                src={'/shopping.jpg'}
+                width={700}
+                height={500}
+                alt="image"
+                className="rounded"
+              />
               
               <motion.div
                 className="absolute -bottom-4 -right-4 bg-card border border-border rounded-xl p-4 shadow-lg"
