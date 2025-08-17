@@ -4,7 +4,7 @@ import { ModeToggle } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion"
-import { Badge, BookOpen, ChefHat, Clock, Heart, Play, Search, Star, Users, ShoppingCart, Link, Smartphone } from "lucide-react";
+import { Clock, Heart, Star, ShoppingCart, Link, Smartphone } from "lucide-react";
 import Image from "next/image";
 
 
@@ -26,9 +26,10 @@ export default function Home() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex"
           >
             <Button variant="outline" className="mr-2">Sign In</Button>
-            <Button>Get Started</Button>
+            <Button className="mr-2">Get Started</Button>
           </motion.div>
         </div>
       </header>
@@ -123,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-muted/30">
+      <section id="features" className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -136,7 +137,7 @@ export default function Home() {
               Everything You Need to Shop Smart
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              From recipe extraction to organized shopping lists, we've got all the tools 
+              From recipe extraction to organized shopping lists, we&apos;ve got all the tools 
               to make meal planning efficient and stress-free.
             </p>
           </motion.div>
@@ -213,11 +214,12 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-border bg-muted/30 py-12">
+      <footer className="border-t border-border py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
               <span className="font-medium text-foreground">Neatly</span>
+              <ModeToggle/>
             </div>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
@@ -228,7 +230,6 @@ export default function Home() {
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
             © 2025 Neatly. All rights reserved.
           </div>
-          <ModeToggle/>
         </div>
       </footer>
     </div>
