@@ -1,5 +1,6 @@
 "use client";
 
+import { ModeToggle } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion"
@@ -227,6 +228,7 @@ export default function Home() {
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
             © 2025 Neatly. All rights reserved.
           </div>
+          <ModeToggle/>
         </div>
       </footer>
     </div>
