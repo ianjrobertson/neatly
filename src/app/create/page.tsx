@@ -50,9 +50,6 @@ export default function Page() {
       </div>
       {recipe && (
         <div className="mt-6 p-4 border rounded">
-          {recipe.image && (
-            <Image src={recipe.image} alt={recipe.title ?? 'recipe image'} className="w-full h-48 object-cover rounded mb-4" />
-          )}
           <h2 className="text-xl font-bold mb-2">{recipe.title}</h2>
           {recipe.description && <p className="text-gray-600 mb-4">{recipe.description}</p>}
           {recipe.author && <p><strong>Author:</strong> {recipe.author}</p>}

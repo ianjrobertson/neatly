@@ -51,10 +51,12 @@ export default function Home() {
                 Combine multiple recipes, group by ingredient type, and never forget an item again.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base">
+                <a href="/create">
+                <Button size="lg" className="text-base cursor-pointer">
                   <Link className="mr-2 h-5 w-5" />
                   Extract Recipe
                 </Button>
+                </a>
                 <Button size="lg" variant="outline" className="text-base">
                   <ShoppingCart className="mr-2 h-5 w-5" />
                   Create Shopping List
