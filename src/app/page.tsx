@@ -4,35 +4,14 @@ import { ModeToggle } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion"
-import { Clock, Heart, Star, ShoppingCart, Link, Smartphone } from "lucide-react";
+import { Clock, Heart, Star, ShoppingCart, Smartphone, Link as LinkIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border/50 bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <motion.div 
-            className="flex items-center gap-2"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="text-xl font-medium text-primary">Neatly</span>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex"
-          >
-            <Button variant="outline" className="mr-2">Sign In</Button>
-            <Button className="mr-2">Get Started</Button>
-          </motion.div>
-        </div>
-      </header>
 
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-4">
@@ -51,12 +30,12 @@ export default function Home() {
                 Combine multiple recipes, group by ingredient type, and never forget an item again.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/create">
-                <Button size="lg" className="text-base cursor-pointer">
-                  <Link className="mr-2 h-5 w-5" />
-                  Extract Recipe
-                </Button>
-                </a>
+                <Link href={"/create"}>
+                  <Button size="lg" className="text-base cursor-pointer">
+                    <LinkIcon className="mr-2 h-5 w-5" />
+                    Extract Recipe
+                  </Button>
+                </Link>
                 <Button size="lg" variant="outline" className="text-base">
                   <ShoppingCart className="mr-2 h-5 w-5" />
                   Create Shopping List
@@ -147,7 +126,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Link,
+                icon: LinkIcon,
                 title: "Recipe URL Extraction",
                 description: "Paste any recipe URL and instantly extract all ingredients with smart parsing"
               },
@@ -208,7 +187,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="text-base">
-                <Link className="mr-2 h-5 w-5" />
+                <Link href={'/create'} className="mr-2 h-5 w-5" />
                 Try Recipe Extraction
               </Button>
             </div>
